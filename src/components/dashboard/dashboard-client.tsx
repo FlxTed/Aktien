@@ -270,12 +270,9 @@ export function DashboardClient() {
       >
         <div className="space-y-8 text-foreground">
 
-          {/* Download app – first thing so it’s impossible to miss */}
-          <motion.section
+          {/* Download app – first thing, always visible (static + client button) */}
+          <section
             aria-label="Download the app"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
             className="rounded-2xl border-2 border-primary/40 bg-primary/10 px-4 py-4 sm:px-5 sm:py-5"
           >
             <h2 className="text-sm font-semibold uppercase tracking-wider text-primary mb-3">
@@ -285,7 +282,7 @@ export function DashboardClient() {
               Install Aktien on your PC for real Windows notifications (bottom-right) when your stocks move.
             </p>
             <InstallAppButton />
-          </motion.section>
+          </section>
 
           <motion.section
             className="space-y-1"
