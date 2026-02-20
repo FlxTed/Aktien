@@ -5,6 +5,7 @@ import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/use-toast";
 import { AppShellWrapper } from "@/components/layout/app-shell-wrapper";
 import { RegisterSW } from "@/components/register-sw";
+import { DownloadBanner } from "@/components/download-banner";
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className={`${dmSans.variable} font-sans min-h-[100dvh] safe-area-pb bg-background text-foreground`}>
         <Providers>
           <RegisterSW />
+          <DownloadBanner />
           <AppShellWrapper>{children}</AppShellWrapper>
           <Toaster />
         </Providers>
